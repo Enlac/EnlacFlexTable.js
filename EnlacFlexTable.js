@@ -20,7 +20,6 @@ function generateTable(){
   var tableHeight = theadHeight > tbodyHeight?theadHeight:tbodyHeight;
   var tablePadding = Math.sqrt(parseInt($('#table').css('padding'), null));
   
-  //$('#table').css({overflow:'hidden'});
   $('#thead').css({display:'inline-flex', width:'calc(100% - '+tablePadding+'px)'});
   $('.tr').css({display:'inline-flex'});
   $('.tr').css({border:0});
@@ -30,10 +29,8 @@ function generateTable(){
   //DETECT LIMIT OF TBODY
   var theadH = $('#thead').height();
   var theadS = parseInt($('#thead').css('borderTopWidth'))+parseInt($('#thead').css('borderBottomWidth'))+parseInt($('#thead').css('paddingTop'))+parseInt($('#thead').css('paddingBottom'));
-  console.log(theadS);
   var tbodyH = $('#tbody').height();
   var tbodyS = parseInt($('#tbody').css('borderTopWidth'))+parseInt($('#tbody').css('borderBottomWidth'))+parseInt($('#tbody').css('paddingTop'))+parseInt($('#tbody').css('paddingBottom'));
-  console.log(tbodyS);
   var tableH = (($('#table').height()-theadH)-theadS)-tbodyS;
   var tbodyOverflow = (($('#table').height()-theadH)-tbodyHeight);
   if(tbodyOverflow < 0){
