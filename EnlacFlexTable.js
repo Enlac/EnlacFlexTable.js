@@ -46,7 +46,6 @@ function generateTable(){
     var tW = parseInt($('#table').attr('width'));
 	var tableWS = parseInt($('#table').css('paddingLeft'))+parseInt($('#table').css('paddingRight'))+parseInt($('#table').css('borderLeftWidth'))+parseInt($('#table').css('borderRightWidth'))+parseInt($('#table').css('marginLeft'))+parseInt($('#table').css('marginRight'));
 	$('#table').width(viewPortW*(tW*0.01)-tableWS);
-	console.log(viewPortW+tableWS);
   }    
 
   //DETECT LIMIT OF TBODY
