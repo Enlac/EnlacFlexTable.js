@@ -33,6 +33,7 @@ function generateTable(){
   $('.tr').css({display:'inline-flex'});
   $('.tr').css({border:0});
   $('.th, .tr, .td').css({width:'100%'});
+  $('.th, .td').css({'word-break':'break-word'});
   
   //FIT TABLE ON THE SCREEN IF IT'S IN PERCENTAGE
   var viewPortH = $(window).height();
