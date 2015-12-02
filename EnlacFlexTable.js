@@ -46,7 +46,7 @@ function generateTable(){
     var tW = parseInt($('#table').attr('width'));
 	var tableWS = parseInt($('#table').css('paddingLeft'))+parseInt($('#table').css('paddingRight'))+parseInt($('#table').css('borderLeftWidth'))+parseInt($('#table').css('borderRightWidth'))+parseInt($('#table').css('marginLeft'))+parseInt($('#table').css('marginRight'));
 	$('#table').width(viewPortW*(tW*0.01)-tableWS);
-  }    
+  }  
 
   //DETECT LIMIT OF TBODY
   var theadH = $('#thead').height();
@@ -64,7 +64,12 @@ function generateTable(){
   //SCROLLING SYSTEM
   $('#tbody').css({overflowY:'auto'}); 
   var scrollingBarWidth =  $('#tbody').width()-document.getElementById('tbody').clientWidth;
-  var theadSpace = parseInt($('#thead').css('borderLeftWidth'))+parseInt($('#thead').css('borderRightWidth'))+parseInt($('#thead').css('padding'));
+  var theadSpace = Number(parseInt($('#thead').css('borderLeftWidth'))+parseInt($('#thead').css('borderRightWidth'))+parseInt($('#thead').css('padding')));
+  theadSpace = isNaN(theadSpace) === true ? 0 : theadSpace;
+  
+  var theadWidthInPx = $('#thead').width();
+  console.log(theadWidthInPx+'\n'+scrollingBarWidth+'\n'+theadSpace);
+  
   $('#thead').css({width:'calc(100% - '+(scrollingBarWidth+theadSpace)+'px)'});
   
   //Set the default back on
