@@ -18,14 +18,14 @@ function generateTable(){
   $('#table').parent().css({overflow:'hidden'});
   
   //SET UP THE BASICS FOR CREATING THE TABLE
-  var thQuantity = $('.th').length;
-  var tdQuantity = $('.tr:first-child .td').length; 
+  //var thQuantity = $('.th').length;
+  //var tdQuantity = $('.tr:first-child .td').length; 
   var theadWidth = $('#thead').width();
   var theadHeight = $('#thead').height();
   var tbodyWidth = $('#tbody').width();
   var tbodyHeight = $('#tbody').height();
-  var tableWidth = theadWidth > tbodyWidth?theadWidth:tbodyWidth;
-  var tableHeight = theadHeight > tbodyHeight?theadHeight:tbodyHeight;
+  //var tableWidth = theadWidth > tbodyWidth?theadWidth:tbodyWidth;
+  //var tableHeight = theadHeight > tbodyHeight?theadHeight:tbodyHeight;
   var tablePadding = Math.sqrt(parseInt($('#table').css('padding'), null));
   
   $('#thead').css({display:'inline-flex', width:'calc(100% - '+tablePadding+'px)'});
